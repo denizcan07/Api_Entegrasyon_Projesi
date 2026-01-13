@@ -1,0 +1,22 @@
+﻿using System.Data;
+using Microsoft.Data.SqlClient;
+
+namespace ApiEntegrasyon.Context
+{
+    public class DapperContext
+    {
+        private readonly IConfiguration _configuration;
+
+        public DapperContext(IConfiguration configuration)
+        {
+            _configuration = configuration;
+        }
+
+        public IDbConnection CreateConnection()
+            => new SqlConnection(
+                _configuration.GetConnectionString("AppConnection")
+            );
+        public IDbConnection CreateMasterConnection()
+        => new SqlConnection(_configuration.GetConnectionString("MasterConnection"));
+    }
+}
