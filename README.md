@@ -1,5 +1,5 @@
 Kurulum: Öncelikle 
-1 - appsettings.Development 'da ilgili mssql connection bilgilerini giriyoruz. bir tanesi master(Database create etmek için) diğer connection ise tüm işlemleri yapacağımız connection'ımız.
+1 - appsettings.Development 'da ilgili mssql connection bilgilerini giriyoruz. bir tanesi MasterConnection(Database create etmek için) diğer connection ise(AppConnection) tüm işlemleri yapacağımız connection'ımız.
 2 - Proje ayağa kalkarken tüm table,stored procedureleri ve örnek kayıtları insert etmektedir.
 2- Connection bilgilerini girildiyse direk projeyi çalıştırıp Swagger üzerinden Kullanıcı adı: admin ve password=123456 yazıp token alarak tüm işlemleri gerçekleştirebilirsiniz.
 
